@@ -16,14 +16,14 @@ test('Part 1 Example', () => {
   expect(part1(EXAMPLE_INPUT)).toBe('CMZ');
 });
 
-// test('Part 1', () => {
-//   const input = fs.readFileSync(`Day04.txt`, 'utf-8');
-//   expect(part1(input)).toBe(456);
-// });
+test('Part 1', () => {
+  const input = fs.readFileSync(`Day05.txt`, 'utf-8');
+  expect(part1(input)).toBe('VQZNJMWTR');
+});
 
-// test('Part 2 Example', () => {
-//   expect(part2(EXAMPLE_INPUT)).toBe(4);
-// });
+test('Part 2 Example', () => {
+  expect(part2(EXAMPLE_INPUT)).toBe(MCD);
+});
 
 // test('Part 2', () => {
 //   const input = fs.readFileSync(`day04.txt`, 'utf-8');
