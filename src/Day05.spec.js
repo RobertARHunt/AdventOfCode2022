@@ -22,10 +22,10 @@ test('Part 1', () => {
 });
 
 test('Part 2 Example', () => {
-  expect(part2(EXAMPLE_INPUT)).toBe(MCD);
+  expect(part2(EXAMPLE_INPUT)).toBe('MCD');
 });
 
-// test('Part 2', () => {
-//   const input = fs.readFileSync(`day04.txt`, 'utf-8');
-//   expect(part2(input)).toBe(808);
-// });
+test('Part 2', () => {
+  const input = fs.readFileSync(`day05.txt`, 'utf-8');
+  expect(part2(input)).toBe('NLCDCLVMQ');
+});

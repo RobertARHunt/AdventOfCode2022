@@ -16,8 +16,6 @@ module.exports.part1 = function (input) {
     }
   });
 
-  console.log({ stacks });
-
   instructions.forEach((instruction) => {
     for (let i = 0; i < instruction.quantity; i++) {
       var holderVar = stacks[instruction.origin - 1].pop();
@@ -52,12 +50,14 @@ module.exports.part2 = function (input) {
 
   console.log({ stacks });
 
-  // instructions.forEach((instruction) => {
-  //   for (let i = 0; i < instruction.quantity; i++) {
-  //     var holderVar = stacks[instruction.origin - 1].pop();
-  //     stacks[instruction.destination - 1].push(holderVar);
-  //   }
-  // });
+  instructions.forEach((instruction) => {
+    var holderArray = [];
+    for (let i = 0; i < instruction.quantity; i++) {
+      var holderVar = stacks[instruction.origin - 1].pop();
+      holderArray.unshift(holderVar);
+    }
+    holderArray.forEach((i) => stacks[instruction.destination - 1].push(i));
+  });
 
   var answer = [];
 
